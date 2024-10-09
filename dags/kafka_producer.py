@@ -1,6 +1,6 @@
-# import subprocess
+import subprocess
 
-# subprocess.run("pip install kafka-python")
+subprocess.run("pip install kafka-python")
 
 from kafka import KafkaProducer
 
