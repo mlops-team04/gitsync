@@ -22,7 +22,7 @@ import json
 
 def send_kafka_broker():
 
-    producer = KafkaProducer(bootstrap_servers='localhost:9092', key_serializer=str.encode)
+    producer = KafkaProducer(bootstrap_servers='my-cluster-kafka-bootstrap.default.svc:9092', key_serializer=str.encode)
 
     FILE_PATH = '/opt/airflow/temp/response_content.json'
 
