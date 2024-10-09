@@ -29,5 +29,5 @@ def send_kafka_broker():
     with open(FILE_PATH, 'r') as f:
         data = json.dump(f)
 
-    producer.send('api_call', data, key='subway')
+    producer.send('my-topic', data, key='subway')
     producer.flush()
