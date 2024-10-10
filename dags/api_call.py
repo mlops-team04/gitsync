@@ -15,10 +15,10 @@ def start():
     url = f'http://openapi.seoul.go.kr:8088/{api_key}/json/CardSubwayStatsNew/1/600/{date}'
 
     response = requests.get(url)
-    response_content = response.content
+    response_content = response.content.decode('utf8')
 
     FILE_PATH = '/opt/airflow/response_content.json'
 
     with open(FILE_PATH, 'w') as f:
-        json.dump(response_content, f).decode('utf8')
+        json.dump(response_content, f)
 
