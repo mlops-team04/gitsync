@@ -20,5 +20,5 @@ def start():
     FILE_PATH = '/opt/airflow/response_content.json'
 
     with open(FILE_PATH, 'w') as f:
-        json.dump(response_content, f)
+        json.dump(response_content, f).decode('utf8')
 
