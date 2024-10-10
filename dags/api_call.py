@@ -17,7 +17,7 @@ def start():
     response = requests.get(url)
     response_content = response.content
 
-    FILE_PATH = '/opt/airflow/temp/response_content.json'
+    FILE_PATH = '/opt/airflow/response_content.json'
 
     with open(FILE_PATH, 'w') as f:
         json.dump(response_content, f)
