@@ -27,7 +27,8 @@ def send_kafka_broker():
     FILE_PATH = '/opt/airflow/response_content.json'
 
     with open(FILE_PATH, 'r') as f:
-        data = json.dumps(f)
+        json_ob = json.load(f)
+        data = json.dumps(json_ob)
 
     producer.send('my-topic', data, key='subway')
     producer.flush()
