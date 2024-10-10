@@ -28,7 +28,7 @@ def send_kafka_broker():
 
     with open(FILE_PATH, 'r') as f:
         json_ob = json.load(f)
-        data = json.dumps(json_ob)
+        data = json.dumps(json_ob).encode('utf-8')
 
     producer.send('my-topic', data, key='subway')
     producer.flush()
